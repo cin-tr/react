@@ -8,7 +8,41 @@ import { FormattedMessage } from "react-intl";
 class Login extends Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            username: "",
+            password: "",
+            isShowPassword: false,
+        };
     }
+
+    handleOnChangeUsername = (event) => {
+        this.setState({
+            username: event.target.value,
+        });
+    };
+
+    handleOnChangePassword = (event) => {
+        this.setState({
+            password: event.target.value,
+        });
+    };
+
+    handleLogin = () => {
+        console.log(
+            "username: ",
+            this.state.username,
+            "password: ",
+            this.state.password
+        );
+        console.log("allState ", this.state);
+    };
+
+    handleShowHidePassword = () => {
+        this.setState({
+            isShowPassword: !this.state.isShowPassword,
+        });
+    };
 
     render() {
         return (
@@ -17,24 +51,58 @@ class Login extends Component {
                     <div className="login-content row">
                         <div className="col-12 text-login">Login</div>
                         <div className="col-12 form-group login-input">
-                            <label>UserName</label>
+                            <label>Username</label>
                             <input
                                 type="text"
                                 className="form-control "
                                 placeholder="Enter your username"
+                                value={this.state.username}
+                                onChange={(event) =>
+                                    this.handleOnChangeUsername(event)
+                                }
                             />
                         </div>
                         <div className="col-12 form-group login-input">
                             <label>Password</label>
-                            <input
-                                type="password"
-                                className="form-control "
-                                placeholder="Enter your password"
-                            />
+                            <div className="custom-input-password">
+                                <input
+                                    type={
+                                        this.state.isShowPassword
+                                            ? "text"
+                                            : "password"
+                                    }
+                                    className="form-control "
+                                    placeholder="Enter your password"
+                                    value={this.state.password}
+                                    onChange={(event) =>
+                                        this.handleOnChangePassword(event)
+                                    }
+                                />
+                                <span
+                                    onClick={() => {
+                                        this.handleShowHidePassword();
+                                    }}
+                                >
+                                    <i
+                                        class={
+                                            this.state.isShowPassword
+                                                ? "far fa-eye"
+                                                : "far fa-eye-slash"
+                                        }
+                                    ></i>
+                                </span>
+                            </div>
                         </div>
 
                         <div className="col-12 ">
-                            <button className="btn-login">Login</button>
+                            <button
+                                className="btn-login"
+                                onClick={() => {
+                                    this.handleLogin();
+                                }}
+                            >
+                                Login
+                            </button>
                         </div>
                         <div className="col-12">
                             <span className="forgot-password">
