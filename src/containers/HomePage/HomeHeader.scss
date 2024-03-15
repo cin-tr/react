@@ -58,3 +58,107 @@
         }
     }
 }
+
+.home-header-banner {
+    height: 480px;
+    background: url(../../assets/header-background.jpeg) no-repeat;
+    background-size: cover;
+    background-position: 50% 35%;
+    display: flex;
+    flex-direction: column;
+
+    .content-up {
+        height: 50%;
+        border: 1px solid red;
+        .title1 {
+            margin-top: 30px;
+            margin-bottom: 5px;
+            font-size: 30px;
+            color: #fff;
+            text-align: center;
+            text-shadow: 1px 1px 1px #333;
+        }
+
+        .title2 {
+            font-size: 30px;
+            font-weight: 700;
+            color: #fff;
+            text-align: center;
+            text-shadow: 1px 1px 1px #333;
+        }
+
+        .search {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: fit-content;
+            margin: 40px auto;
+            padding: 10px;
+            border-radius: 999px;
+            background: #f7d800;
+
+            i {
+                margin: 0 5px;
+                cursor: pointer;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+
+            input {
+                width: 360px;
+                height: 30px;
+                background: transparent;
+                border: none;
+                outline: none;
+                color: #fff;
+            }
+        }
+    }
+
+    .content-down {
+        height: 50%;
+        border: 1px solid red;
+
+        .options {
+            height: 100%;
+            text-align: center;
+            display: flex;
+            gap: 50px;
+            justify-content: center;
+            border: 1px solid red;
+            align-items: flex-end;
+
+            .option-child {
+                width: 100px;
+                border: 1px solid red;
+
+                .icon-child {
+                    margin: 0 auto;
+                    padding: 10px;
+                    width: 40px;
+                    height: 40px;
+                    text-align: center;
+                    border-radius: 50%;
+                    background: #fff;
+
+                    i {
+                        color: #49bce2;
+                        font-size: 20px;
+                    }
+                }
+
+                .text-child {
+                    font-size: 15px;
+                    font-weight: 600;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #49bce2;
+                    }
+                }
+            }
+        }
+    }
+}
