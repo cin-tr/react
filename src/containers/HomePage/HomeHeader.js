@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import "./HomeHeader.scss";
 import { FormattedMessage } from "react-intl";
 import { LANGUAGE } from "../../utils";
-import { changLanguageApp } from "../../store/actions/appActions";
+import { changeLanguageApp } from "../../store/actions/appActions";
 
 class HomeHeader extends Component {
     changLanguage = (language) => {
@@ -184,7 +184,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         changLanguageAppRedux: (language) =>
-            dispatch(changLanguageApp(language)),
+            dispatch(changeLanguageApp(language)),
     };
 };
 
