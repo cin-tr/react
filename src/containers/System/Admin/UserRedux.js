@@ -100,6 +100,7 @@ class UserRedux extends Component {
                 role: arrRoles && arrRoles.length > 0 ? arrRoles[0].key : "",
                 avatar: "",
                 action: CRUD_ACTIONS.CREATE,
+                previewImgURL: "",
             });
         }
     }
@@ -157,6 +158,7 @@ class UserRedux extends Component {
                 gender: this.state.gender,
                 roleId: this.state.role,
                 positionId: this.state.position,
+                avatar: this.state.avatar,
             });
         }
     };
@@ -232,6 +234,11 @@ class UserRedux extends Component {
     };
 
     handleEditUserFromParent = (user) => {
+        let imageBase64 = "";
+        if (user.image) {
+            imageBase64 = new Buffer(user.image, "base64").toString("binary");
+        }
+
         this.setState({
             email: user.email,
             password: "HARDCODE",
@@ -243,6 +250,7 @@ class UserRedux extends Component {
             position: user.positionId,
             role: user.roleId,
             avatar: "",
+            previewImgURL: imageBase64,
             action: CRUD_ACTIONS.EDIT,
             userEditId: user.id,
         });
