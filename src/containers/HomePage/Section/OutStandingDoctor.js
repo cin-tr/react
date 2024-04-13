@@ -33,9 +33,11 @@ class OutStandingDoctor extends Component {
                 <div className="section-container">
                     <div className="section-header">
                         <span className="title-section">
-                            Bác sĩ nổi bật tuần qua
+                            <FormattedMessage id="homepage.outstanding-doctor" />
                         </span>
-                        <button className="btn-section">xem thêm</button>
+                        <button className="btn-section">
+                            <FormattedMessage id="homepage.more-infor" />
+                        </button>
                     </div>
                     <div className="section-body">
                         <Slider {...this.props.settings}>
