@@ -4,6 +4,7 @@ import { FormattedMessage } from "react-intl";
 import Slider from "react-slick";
 import * as actions from "../../../store/actions";
 import { LANGUAGE } from "../../../utils";
+import { withRouter } from "react-router";
 
 class OutStandingDoctor extends Component {
     constructor(props) {
@@ -24,6 +25,12 @@ class OutStandingDoctor extends Component {
     componentDidMount() {
         this.props.loadTopDoctors();
     }
+
+    handleViewDetailDoctorItem = (doctor) => {
+        if (this.props.history) {
+            this.props.history.push(`/detail-doctor/${doctor.id}`);
+        }
+    };
 
     render() {
         let arrDoctors = this.state.arrDoctors;
@@ -57,6 +64,11 @@ class OutStandingDoctor extends Component {
                                         <div
                                             className="section-customize"
                                             key={index}
+                                            onClick={() =>
+                                                this.handleViewDetailDoctorItem(
+                                                    item
+                                                )
+                                            }
                                         >
                                             <div className="outer-bg">
                                                 <div
@@ -99,4 +111,6 @@ const mapDispatchToProps = (dispatch) => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(OutStandingDoctor);
+export default withRouter(
+    connect(mapStateToProps, mapDispatchToProps)(OutStandingDoctor)
+);
