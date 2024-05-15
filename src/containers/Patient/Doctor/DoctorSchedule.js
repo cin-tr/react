@@ -12,6 +12,7 @@ class DoctorSchedule extends Component {
         super(props);
         this.state = {
             allDays: [],
+            allAvailableTime: [],
         };
     }
 
@@ -67,12 +68,20 @@ class DoctorSchedule extends Component {
             let doctorId = this.props.doctorIdFromParent;
             let date = event.target.value;
             let res = await getScheduleDoctorByDate(doctorId, date);
+
+            if (res && res.errCode === 0) {
+                this.setState({
+                    allAvailableTime: res.data ? res.data : [],
+                });
+            }
+
             console.log("check res from react: ", res);
         }
     };
 
     render() {
-        let { allDays } = this.state;
+        let { allDays, allAvailableTime } = this.state;
+        let { language } = this.props;
         return (
             <div className="doctor-schedule-container">
                 <div className="all-schedule">
@@ -90,7 +99,27 @@ class DoctorSchedule extends Component {
                             })}
                     </select>
                 </div>
-                <div className="all-available-time"></div>
+                <div className="all-available-time">
+                    <div className="text-calendar">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>Lịch khám</span>
+                    </div>
+                    <div className="time-content">
+                        {allAvailableTime && allAvailableTime.length > 0 ? (
+                            allAvailableTime.map((item, index) => {
+                                let timeDisplay =
+                                    language === LANGUAGE.VI
+                                        ? item.timeTypeData.valueVi
+                                        : item.timeTypeData.valueEn;
+                                return (
+                                    <button key={index}>{timeDisplay}</button>
+                                );
+                            })
+                        ) : (
+                            <div>Không có lịch hẹn trong thời gian này!!!</div>
+                        )}
+                    </div>
+                </div>
             </div>
         );
     }
