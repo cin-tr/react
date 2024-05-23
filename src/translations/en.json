@@ -73,6 +73,13 @@
             "no-schedule": "There are no appointments at this time!!!",
             "choose": "Choose ",
             "book-free": " and book (free)!"
+        },
+        "extra-infor-doctor": {
+            "text-address": "Address",
+            "price": "Price",
+            "detail": "Detail",
+            "payment": "Patients can pay in the form of: ",
+            "hide-price": "Hide"
         }
     },
 
@@ -82,7 +89,13 @@
             "select-doctor": "Select doctor",
             "intro": "Introduction",
             "add": "Create information",
-            "save": "Save Information"
+            "save": "Save Information",
+            "price": "Price",
+            "payment": "Payment",
+            "province": "Province",
+            "name-clinic": "Clinic's Name",
+            "address-clinic": "Clinic's Address",
+            "note": "Note"
         }
     }
 }
