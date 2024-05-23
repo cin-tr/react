@@ -483,7 +483,7 @@ class UserRedux extends Component {
                                         htmlFor="previewImg"
                                     >
                                         Tải ảnh
-                                        <i class="fas fa-upload"></i>
+                                        <i className="fas fa-upload"></i>
                                     </label>
                                     <div
                                         className="preview-image"

@@ -270,7 +270,7 @@ class ManageDoctor extends Component {
                             options={this.state.listDoctors}
                             placeholder={
                                 <div>
-                                    <i class="fas fa-user-md"></i>
+                                    <i className="fas fa-user-md"></i>
                                     <FormattedMessage
                                         id={"admin.manage-doctor.select-doctor"}
                                     />
