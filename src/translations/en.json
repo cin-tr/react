@@ -58,7 +58,8 @@
     },
     "homepage": {
         "outstanding-doctor": "Outstanding doctor",
-        "more-infor": "More..."
+        "more-infor": "More...",
+        "specialty-popular": "Popular Specialties"
     },
 
     "manage-schedule": {
