@@ -73,24 +73,33 @@ class Login extends Component {
     render() {
         return (
             <div className="login-background">
+                <div className="login-title">
+                    <h2>Login</h2>
+                    <span>Hello! Let's get started!</span>
+                </div>
                 <div className="login-container">
                     <div className="login-content row">
-                        <div className="col-12 text-login">Login</div>
                         <div className="col-12 form-group login-input">
                             <label>Username</label>
-                            <input
-                                type="text"
-                                className="form-control "
-                                placeholder="Enter your username"
-                                value={this.state.username}
-                                onChange={(event) =>
-                                    this.handleOnChangeUsername(event)
-                                }
-                            />
+                            <div className="custom-input">
+                                <input
+                                    type="email"
+                                    className="form-control "
+                                    placeholder="Enter your username"
+                                    value={this.state.username}
+                                    onChange={(event) =>
+                                        this.handleOnChangeUsername(event)
+                                    }
+                                    required
+                                />
+                                <span>
+                                    <i className="fas fa-user"></i>
+                                </span>
+                            </div>
                         </div>
                         <div className="col-12 form-group login-input">
                             <label>Password</label>
-                            <div className="custom-input-password">
+                            <div className="custom-input">
                                 <input
                                     type={
                                         this.state.isShowPassword
@@ -125,7 +134,7 @@ class Login extends Component {
                         <div className="col-12" style={{ color: "red" }}>
                             {this.state.errMessage}
                         </div>
-                        <div className="col-12 ">
+                        <div className="col-12 login-btn">
                             <button
                                 className="btn-login"
                                 onClick={() => {
@@ -136,14 +145,14 @@ class Login extends Component {
                             </button>
                         </div>
                         <div className="col-12">
-                            <span className="forgot-password">
-                                Forgot your password?
-                            </span>
+                            <div className="forgot-password">
+                                <span>Forgot your password?</span>
+                            </div>
                         </div>
 
                         <div className="col-12 text-center mt-3">
                             <span className="text-other-login">
-                                Or Login With:
+                                Login With:
                             </span>
                         </div>
 

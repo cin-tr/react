@@ -4,10 +4,27 @@
     z-index: 99;
     display: flex;
     justify-content: space-between;
-    background-color: $colormain;
+    align-items: center;
+    // background-color: $colormain;
     color: $common-text-color;
-    height: 40px;
+    background-image: linear-gradient(
+        to right,
+        #1a2980 0%,
+        #26d0ce 51%,
+        #1a2980 100%
+    );
+    height: 60px;
     position: relative;
+    transition: 1s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 40px #4c4444;
+
+    &:hover {
+        background-position: right center; /* change the direction of the change here */
+        color: #fff;
+        text-decoration: none;
+    }
 
     .languages {
         .welcome {

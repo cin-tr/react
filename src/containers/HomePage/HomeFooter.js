@@ -8,10 +8,10 @@ class HomeFooter extends Component {
         return (
             <div className="home-footer">
                 <p>
-                    &copy; 2024 BookingCare.com More information, please access
-                    my youtube chanel.
+                    &copy; 2024 Website.com More information, please access my
+                    website.
                     <a
-                        href="https://www.youtube.com/watch?v=147SkAVXEqM&list=PLncHg6Kn2JT6E38Z3kit9Hnif1xC_9VqI&index=62"
+                        href="https://www.youtube.com/watch?v=QsUURpGABdU"
                         target="_blank"
                     >
                         &#8594; Click here &#8592;

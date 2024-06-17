@@ -11,42 +11,43 @@
     .menu-group {
         &:hover {
             cursor: pointer;
-            background-color: darken($colormain, 5);
+            // background-color: darken($colormain, 5);
+            color: darken($colormain, 5);
         }
         .menu-group-name {
-            line-height: 40px;
-            padding: 0 15px;
-            border-right: 1px solid $border;
-            &:first-child {
-                border-left: 1px solid $border;
-            }
+            line-height: 60px;
+            padding: 0 30px;
+            // border-right: 1px solid $border;
+            // &:first-child {
+            //     border-left: 1px solid $border;
+            // }
         }
         .menu-list {
             display: none;
-            background-color: $bg-menu-color;
+            background-color: #2fa8e4;
+            background-image: linear-gradient(0deg, #2fa8e4 0%, #8aeee2 100%);
+
             box-shadow: 2px 2px 4px 0 $box-shadow-color;
             -webkit-box-shadow: 2px 2px 4px 0 $box-shadow-color;
             color: $text-in-light;
             position: absolute;
             padding: 0;
+            border-radius: 0 0 5px 5px;
+
             .menu {
-                width: 205px;
+                // width: 205px;
                 padding: 0 15px;
                 height: 35px;
                 line-height: 35px;
                 text-transform: none;
+                color: #fff;
 
-                &.active {
-                    background-color: #ededed;
-
-                    a {
-                        color: orange;
-                    }
+                &.active:hover {
                 }
 
                 .menu-link {
                     text-decoration: none;
-                    color: $text-in-light;
+                    color: darken($colormain, 5);
                 }
                 .sub-menu-list {
                     display: none;

@@ -8,27 +8,27 @@ class About extends Component {
         return (
             <div className="section-share section-about">
                 <div className="section-about-header">
-                    Truyền thông nói về BookingCare
+                    Thông tin thêm về website
                 </div>
                 <div className="section-about-content">
                     <div className="content-left">
                         <iframe
                             width="100%"
-                            height="400px"
-                            src="https://www.youtube.com/embed/VvvXhNbFWKY?list=PLncHg6Kn2JT6E38Z3kit9Hnif1xC_9VqI"
-                            title="#N6 Phân Tích Các Kiến Thức Nhận Được Khóa Học Fullstack | Khóa Học Node.JS và React Cho Beginners"
-                            frameBorder="0"
+                            height="400"
+                            src="https://www.youtube.com/embed/QsUURpGABdU"
+                            title="nhạc genz cho hè chill | Em Có Quen Người Nào Chưa TikTok |  Lưu Luyến Sau Chia Tay x Thức Giấc Lofi"
+                            frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowFullScreen
+                            allowfullscreen
                         ></iframe>
                     </div>
                     <div className="content-right">
                         <p>
-                            Trong video này, chúng ta sẽ hoàn tất việc design
-                            giao diện theo trang bookingcare.vn. Chúng ta sẽ
-                            hoàn thiện những phần đang còn dang dở, để từ video
-                            tiếp theo, chúng ta sẽ bắt đầu làm về backend và
-                            react để tạo dữ liệu thật cho trang home design này.
+                            Tìm hiểu thông tin y khoa xác thực, hữu ích tại
+                            Website 👨‍⚕️👩‍⚕️ Bạn đang tìm kiếm thông tin y khoa uy
+                            tín để chăm sóc sức khỏe bản thân và gia đình? Hãy
+                            truy cập Sống khỏe cùng với các bài viết được kiểm
+                            duyệt bởi đội ngũ bác sĩ chuyên khoa.
                         </p>
                     </div>
                 </div>
