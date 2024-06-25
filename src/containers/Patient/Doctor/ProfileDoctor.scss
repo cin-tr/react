@@ -21,12 +21,22 @@
             .up {
                 font-size: 18px;
                 font-weight: 600;
+                color: #0ab1c4;
             }
 
             .down {
                 padding-top: 5px;
                 text-align: justify;
                 text-transform: capitalize;
+            }
+        }
+    }
+    .view-detail-doctor {
+        a {
+            color: #0ab1c4 !important;
+            &:hover {
+                border: none;
+                text-decoration: none;
             }
         }
     }

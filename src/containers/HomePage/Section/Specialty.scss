@@ -1,6 +1,10 @@
 .section-specialty {
     .specialty-child {
         cursor: pointer;
+        .section-specialty {
+            background-size: contain !important;
+            background-color: #fff !important;
+        }
         .specialty-name {
             padding: 10px 0;
             text-align: center;

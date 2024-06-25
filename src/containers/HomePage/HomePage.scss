@@ -148,7 +148,7 @@
                 outline: none;
                 border: none;
                 border-radius: 999px;
-                color: #dadbe3;
+                color: #dadbe3 !important;
 
                 background-image: linear-gradient(
                     to right,
@@ -157,14 +157,21 @@
                     #1a2980 100%
                 );
                 text-align: center;
-                text-transform: uppercase;
                 transition: 0.5s;
                 background-size: 200% auto;
                 box-shadow: 0 0 20px #eee;
 
+                a {
+                    color: #dadbe3 !important;
+                    text-decoration: none !important;
+                    &:hover {
+                        color: #fff !important;
+                    }
+                }
+
                 &:hover {
                     background-position: right center; /* change the direction of the change here */
-                    color: #fff;
+                    color: #fff !important;
                     text-decoration: none;
                 }
             }

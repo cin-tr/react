@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import HomeHeader from "../../HomePage/HomeHeader";
+import HomeFooter from "../../HomePage/HomeFooter";
 import "./DetailSpecialty.scss";
 import { FormattedMessage } from "react-intl";
 import DoctorSchedule from "../Doctor/DoctorSchedule";
@@ -115,6 +116,7 @@ class DetailSpecialty extends Component {
                 <div className="detail-specialty-container">
                     <HomeHeader />
                     <div className="detail-specialty-body">
+                        <div className="blur"></div>
                         <div className="description-specialty">
                             {dataDetailSpecialty &&
                                 !_.isEmpty(dataDetailSpecialty) && (
@@ -125,6 +127,7 @@ class DetailSpecialty extends Component {
                                     ></div>
                                 )}
                         </div>
+
                         <div className="search-sp-doctor">
                             <select
                                 onChange={(event) =>
@@ -181,6 +184,7 @@ class DetailSpecialty extends Component {
                                 );
                             })}
                     </div>
+                    <HomeFooter />
                 </div>
             </>
         );

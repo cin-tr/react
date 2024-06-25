@@ -1,6 +1,6 @@
 .doctor-detail-container {
     height: 500px;
-    margin: 0 100px;
+    margin: 20px 100px;
     .intro-doctor {
         display: flex;
         justify-content: space-between;
@@ -24,6 +24,7 @@
                 padding-top: 15px;
                 font-size: 20px;
                 font-weight: 600;
+                color: #76dae6;
             }
 
             .down {
@@ -46,12 +47,19 @@
     }
 
     .detail-infor-doctor {
-        padding: 20px;
+        padding: 10px 80px;
         background-color: #f2f2f2;
         border-top: 1px solid #8c8c8c;
 
         img {
             width: 100%;
+        }
+        h1,
+        h2,
+        h3,
+        h4 {
+            text-align: center;
+            border-bottom: 1px solid #ccc;
         }
     }
 }

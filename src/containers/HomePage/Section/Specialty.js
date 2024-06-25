@@ -6,6 +6,7 @@ import Slider from "react-slick";
 import specialtyImg from "../../../assets/specialty/co-xuong-khop.jpeg";
 import { getAllSpecialty } from "../../../services/userService";
 import { withRouter } from "react-router";
+import { Link } from "react-router-dom";
 class Specialty extends Component {
     constructor(props) {
         super(props);
@@ -43,7 +44,9 @@ class Specialty extends Component {
                         </span>
                         <button className="btn-section">
                             {" "}
-                            <FormattedMessage id={"homepage.more-infor"} />
+                            <Link to={`detail-specialty/12`}>
+                                <FormattedMessage id={"homepage.more-infor"} />
+                            </Link>
                         </button>
                     </div>
                     <div className="section-body">

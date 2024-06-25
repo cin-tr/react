@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import HomeHeader from "../../HomePage/HomeHeader";
+import HomeFooter from "../../HomePage/HomeFooter";
 import "./DetailClinic.scss";
 import { FormattedMessage } from "react-intl";
 import DoctorSchedule from "../Doctor/DoctorSchedule";
@@ -67,11 +68,14 @@ class DetailClinic extends Component {
                 <div className="detail-clinic-container">
                     <HomeHeader />
                     <div className="detail-clinic-body">
+                        <div className="blur"></div>
                         <div className="description-clinic">
                             {dataDetailClinic &&
                                 !_.isEmpty(dataDetailClinic) && (
                                     <>
-                                        <div>{dataDetailClinic.name}</div>
+                                        <div className="name">
+                                            {dataDetailClinic.name}
+                                        </div>
                                         <div
                                             dangerouslySetInnerHTML={{
                                                 __html: dataDetailClinic.descriptionHTML,
@@ -114,6 +118,7 @@ class DetailClinic extends Component {
                                 );
                             })}
                     </div>
+                    <HomeFooter />
                 </div>
             </>
         );

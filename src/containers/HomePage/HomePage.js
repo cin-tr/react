@@ -27,7 +27,7 @@ class HomePage extends Component {
                 <OutStandingDoctor settings={settings} />
                 <HandBook settings={settings} />
                 <About settings={settings} />
-                <HomeFooter />
+                <HomeFooter isShowBanner={true} />
             </div>
         );
     }

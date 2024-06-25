@@ -6,6 +6,7 @@ import * as actions from "../../../store/actions";
 import { LANGUAGE } from "../../../utils";
 import { withRouter } from "react-router";
 import "./OutStandingDoctor.scss";
+import { Link } from "react-router-dom";
 
 class OutStandingDoctor extends Component {
     constructor(props) {
@@ -44,7 +45,9 @@ class OutStandingDoctor extends Component {
                             <FormattedMessage id="homepage.outstanding-doctor" />
                         </span>
                         <button className="btn-section">
-                            <FormattedMessage id="homepage.more-infor" />
+                            <Link to={`detail-doctor/53`}>
+                                <FormattedMessage id="homepage.more-infor" />
+                            </Link>
                         </button>
                     </div>
                     <div className="section-body">

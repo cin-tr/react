@@ -5,6 +5,7 @@ import { FormattedMessage } from "react-intl";
 import { LANGUAGE } from "../../utils";
 import { changeLanguageApp } from "../../store/actions/appActions";
 import { withRouter } from "react-router";
+import { Link } from "react-router-dom";
 
 class HomeHeader extends Component {
     changLanguage = (language) => {
@@ -35,30 +36,45 @@ class HomeHeader extends Component {
                             <div className="child-content">
                                 <div>
                                     <b>
-                                        <FormattedMessage id="home-header.medical-specialty" />
+                                        <Link to={`detail-specialty/12`}>
+                                            <FormattedMessage id="home-header.medical-specialty" />
+                                        </Link>
                                     </b>
                                 </div>
-                                <div className="subs-title">
+                                <div
+                                    className="subs-title"
+                                    onClick={() => this.returnToHome()}
+                                >
                                     <FormattedMessage id="home-header.search-doctor-specialty" />
                                 </div>
                             </div>
                             <div className="child-content">
                                 <div>
                                     <b>
-                                        <FormattedMessage id="home-header.health-facility" />
+                                        <Link to={`detail-clinic/11`}>
+                                            <FormattedMessage id="home-header.health-facility" />
+                                        </Link>
                                     </b>
                                 </div>
-                                <div className="subs-title">
+                                <div
+                                    className="subs-title"
+                                    onClick={() => this.returnToHome()}
+                                >
                                     <FormattedMessage id="home-header.search-hospital" />
                                 </div>
                             </div>
                             <div className="child-content">
                                 <div>
                                     <b>
-                                        <FormattedMessage id="home-header.doctor" />
+                                        <Link to={`detail-doctor/53`}>
+                                            <FormattedMessage id="home-header.doctor" />
+                                        </Link>
                                     </b>
                                 </div>
-                                <div className="subs-title">
+                                <div
+                                    className="subs-title"
+                                    onClick={() => this.returnToHome()}
+                                >
                                     <FormattedMessage id="home-header.search-doctor" />
                                 </div>
                             </div>
