@@ -55,14 +55,18 @@ class MedicalFacility extends Component {
                                                 )
                                             }
                                         >
-                                            <div
-                                                className="bg-image section-medical-facility"
-                                                style={{
-                                                    backgroundImage: `url(${item.image})`,
-                                                }}
-                                            ></div>
-                                            <div className="clinic-name">
-                                                {item.name}
+                                            <div className="wrap">
+                                                <div
+                                                    className="bg-image section-medical-facility"
+                                                    style={{
+                                                        backgroundImage: `url(${item.image})`,
+                                                    }}
+                                                ></div>
+                                            </div>
+                                            <div className="name">
+                                                <div className="clinic-name">
+                                                    {item.name}
+                                                </div>
                                             </div>
                                         </div>
                                     );

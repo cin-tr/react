@@ -44,6 +44,7 @@
     },
     "manage-user": {
         "add-user": "Thêm mới người dùng",
+        "title": "Quản lý người dùng",
         "email": "Email",
         "password": "Mật khẩu",
         "first-name": "Tên",
@@ -55,7 +56,8 @@
         "role": "Vai trò",
         "image": "Ảnh đại diện",
         "save": "Lưu người dùng",
-        "edit": "Lưu thay đổi"
+        "edit": "Lưu thay đổi",
+        "download-img": "Tải ảnh"
     },
     "homepage": {
         "outstanding-doctor": "Bác sĩ nổi bật",
@@ -67,6 +69,22 @@
         "title": "Quản lý kế hoạch khám bệnh của bác sĩ",
         "choose-doctor": "Chọn bác sĩ",
         "choose-date": "Chọn lịch khám",
+        "save": "Lưu Thông Tin",
+        "hour": "Chọn khung giờ khám"
+    },
+
+    "manage-clinic": {
+        "title": "Quản lý phòng khám",
+        "name-clinic": "Tên phòng khám",
+        "address-clinic": "Địa chỉ phòng khám",
+        "image": "Tải ảnh phòng khám",
+        "save": "Lưu Thông Tin"
+    },
+
+    "manage-specialty": {
+        "title": "Quản lý chuyên khoa",
+        "name-specialty": "Tên chuyên khoa",
+        "image": "Tải ảnh chuyên khoa",
         "save": "Lưu Thông Tin"
     },
 
@@ -107,14 +125,29 @@
             "intro": "Thông tin giới thiệu",
             "add": "Tạo thông tin",
             "save": "Lưu thông tin",
-            "price": "Giá khám bệnh",
-            "payment": "Phương thức thanh toán",
-            "province": "Tỉnh thành",
+            "price": "Chọn giá khám",
+            "payment": "Chọn phương thức thanh toán",
+            "province": "Chọn tỉnh thành",
             "name-clinic": "Tên phòng khám",
             "address-clinic": "Địa chỉ phòng khám",
             "note": "Ghi chú",
             "specialty": "Chọn chuyên khoa",
             "select-clinic": "Chọn phòng khám"
+        },
+        "title": {
+            "select-doctor": "Bác sĩ",
+            "price": "Giá khám bệnh",
+            "payment": "Phương thức thanh toán",
+            "province": "Tỉnh thành",
+            "specialty": "Chuyên khoa",
+            "select-clinic": "Phòng khám"
         }
+    },
+
+    "table": {
+        "firstname": "Tên",
+        "lastname": "Họ",
+        "address": "Địa chỉ",
+        "action": "Hành động"
     }
 }

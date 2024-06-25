@@ -55,10 +55,18 @@ class TableManageUser extends Component {
                     <tbody>
                         <tr>
                             <th>Email</th>
-                            <th>Firstname</th>
-                            <th>Lastname</th>
-                            <th>Address</th>
-                            <th>Action</th>
+                            <th>
+                                <FormattedMessage id={"table.firstname"} />
+                            </th>
+                            <th>
+                                <FormattedMessage id={"table.lastname"} />
+                            </th>
+                            <th>
+                                <FormattedMessage id={"table.address"} />
+                            </th>
+                            <th>
+                                <FormattedMessage id={"table.action"} />
+                            </th>
                         </tr>
 
                         {arrUsers &&
@@ -93,11 +101,11 @@ class TableManageUser extends Component {
                             })}
                     </tbody>
                 </table>
-                <MdEditor
+                {/* <MdEditor
                     style={{ height: "500px" }}
                     renderHTML={(text) => mdParser.render(text)}
                     onChange={handleEditorChange}
-                />
+                /> */}
             </React.Fragment>
         );
     }

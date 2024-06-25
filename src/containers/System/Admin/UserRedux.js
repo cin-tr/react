@@ -277,13 +277,15 @@ class UserRedux extends Component {
 
         return (
             <div className="user-redux-container">
-                <div className="title">Manage Users</div>
+                <div className="title">
+                    <FormattedMessage id="manage-user.title" />
+                </div>
                 <div className="user-redux-body">
                     <div className="container">
                         <div className="row">
-                            <div className="col-12 my-3">
+                            {/* <div className="col-12 my-3">
                                 <FormattedMessage id="manage-user.add-user" />
-                            </div>
+                            </div> */}
 
                             <div className="col-6">
                                 <label>
@@ -482,7 +484,7 @@ class UserRedux extends Component {
                                         className="label-upload"
                                         htmlFor="previewImg"
                                     >
-                                        Tải ảnh
+                                        <FormattedMessage id="manage-user.download-img" />
                                         <i className="fas fa-upload"></i>
                                     </label>
                                     <div
@@ -496,20 +498,24 @@ class UserRedux extends Component {
                             </div>
 
                             <div className="col-12 my-3">
-                                <button
-                                    className={
-                                        this.state.action === CRUD_ACTIONS.EDIT
-                                            ? "btn btn-warning"
-                                            : "btn btn-primary"
-                                    }
-                                    onClick={() => this.handleSaveUser()}
-                                >
-                                    {this.state.action === CRUD_ACTIONS.EDIT ? (
-                                        <FormattedMessage id="manage-user.edit" />
-                                    ) : (
-                                        <FormattedMessage id="manage-user.save" />
-                                    )}
-                                </button>
+                                <div className="button">
+                                    <button
+                                        className={
+                                            this.state.action ===
+                                            CRUD_ACTIONS.EDIT
+                                                ? "btn btn-warning"
+                                                : "btn btn-primary"
+                                        }
+                                        onClick={() => this.handleSaveUser()}
+                                    >
+                                        {this.state.action ===
+                                        CRUD_ACTIONS.EDIT ? (
+                                            <FormattedMessage id="manage-user.edit" />
+                                        ) : (
+                                            <FormattedMessage id="manage-user.save" />
+                                        )}
+                                    </button>
+                                </div>
                             </div>
 
                             <div className="col-12 mb-5">

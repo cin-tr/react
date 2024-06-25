@@ -26,24 +26,25 @@
     "menu": {
         "admin": {
             "manage-user": "General Management",
-            "manage-doctor": "Manage doctor",
+            "manage-doctor": "Doctor Management",
             "manage-admin": "Manage admin",
             "crud": "CRUD user",
-            "crud-redux": "Manage Users",
+            "crud-redux": "User Management",
             "clinic": "Clinic",
-            "manage-clinic": "Manage Clinic",
+            "manage-clinic": "Clinic Management",
             "specialty": "Specialty",
-            "manage-specialty": "Manage Specialty",
+            "manage-specialty": "Specialty Management",
             "handbook": "Handbook",
-            "manage-handbook": "Manage Handbook"
+            "manage-handbook": "Handbook Management"
         },
         "doctor": {
-            "manage-schedule": "Manage Doctor's Schedule",
-            "manage-patient": "Manage Doctor's Patients"
+            "manage-schedule": "Doctor's Schedule Management",
+            "manage-patient": "Doctor's Patients Management"
         }
     },
     "manage-user": {
         "add-user": "Add a new user",
+        "title": "user management",
         "email": "Email",
         "password": "Password",
         "first-name": "First name",
@@ -55,20 +56,37 @@
         "role": "Role",
         "image": "Avatar",
         "save": "Save user",
-        "edit": "Save changes"
+        "edit": "Save changes",
+        "download-img": "Upload image"
     },
     "homepage": {
         "outstanding-doctor": "Outstanding doctor",
-        "more-infor": "More...",
+        "more-info": "More...",
         "specialty-popular": "Popular Specialties"
     },
 
     "manage-schedule": {
-        "title": "Manage Doctor's Schedule",
+        "title": "Doctor's Schedule Management",
         "choose-doctor": "Choose Doctor",
         "choose-date": "Choose An Appointment",
-        "save": "Save Infor"
+        "save": "Save Info",
+        "hour": "Choose An Examination Time Frame"
     },
+    "manage-clinic": {
+        "title": "Clinic Management",
+        "name-clinic": "Clinic Name",
+        "address-clinic": "Clinic Address",
+        "image": "Upload Clinic Photo",
+        "save": "Save Info"
+    },
+
+    "manage-specialty": {
+        "title": "Specialty Management",
+        "name-specialty": "Specialty Name",
+        "image": "Upload Specialty Photo",
+        "save": "Save Info"
+    },
+
     "patient": {
         "detail-doctor": {
             "schedule": "Schedule",
@@ -102,18 +120,32 @@
     "admin": {
         "manage-doctor": {
             "title": "Doctor Information",
-            "select-doctor": "Select doctor",
+            "select-doctor": "Choose doctor",
             "intro": "Introduction",
             "add": "Create information",
             "save": "Save Information",
+            "price": "Choose price",
+            "payment": "Choose payment",
+            "province": "Choose province",
+            "name-clinic": "Clinic Name",
+            "address-clinic": "Clinic Address",
+            "note": "Note",
+            "specialty": "Choose specialty",
+            "select-clinic": "Choose clinic"
+        },
+        "title": {
+            "select-doctor": "Doctor",
             "price": "Price",
             "payment": "Payment",
             "province": "Province",
-            "name-clinic": "Clinic's Name",
-            "address-clinic": "Clinic's Address",
-            "note": "Note",
             "specialty": "Specialty",
             "select-clinic": "Clinic"
         }
+    },
+    "table": {
+        "firstname": "First Name",
+        "lastname": "Last Name",
+        "address": "Address",
+        "action": "Action"
     }
 }

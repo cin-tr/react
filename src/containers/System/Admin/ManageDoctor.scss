@@ -1,20 +1,19 @@
 .manage-doctor-container {
-    // padding: 15px;
-    background-color: #ffffff;
-    background-image: linear-gradient(180deg, #ffffff 0%, #d4f5f4 100%);
-    margin-top: 35px;
-
     .manage-doctor-title {
         margin: 15px 0;
-        font-size: 20px;
         font-weight: 600;
         text-align: center;
         text-transform: uppercase;
-        color: #0071ba;
+        font-size: 30px;
+        color: #1b2d82;
+        letter-spacing: 3px;
+        text-shadow: 2px 2px #24cacb;
+        font-weight: bold;
+        padding-bottom: 20px;
     }
     .more-infor {
         display: flex;
-        gap: 15px;
+        // gap: 15px;
         .content-left {
             width: 35%;
         }
@@ -22,34 +21,82 @@
             width: 65%;
         }
     }
+    .button {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        .save-content-doctor {
+            min-width: 180px;
+            margin: 25px 0;
+            height: 40px;
+            outline: none;
+            border: none;
+            border-radius: 999px;
+            color: #1b2a81;
 
-    .save-content-doctor {
-        padding: 5px;
-        margin: 30px 0;
-        border: none;
-        outline: none;
-        border-radius: 5px;
-        background: orange;
-        color: #fff;
-        cursor: pointer;
+            background-image: linear-gradient(
+                to right,
+                #ff8008 0%,
+                #ffc837 51%,
+                #ff8008 100%
+            );
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            box-shadow: 0 0 20px #eee;
+            display: block;
 
-        &:hover {
-            opacity: 0.9;
+            &:hover {
+                background-position: right center; /* change the direction of the change here */
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+
+        .create-content-doctor {
+            min-width: 180px;
+            margin: 25px 0;
+            height: 40px;
+            outline: none;
+            border: none;
+            border-radius: 999px;
+            color: #dadbe3;
+
+            background-image: linear-gradient(
+                to right,
+                #1a2980 0%,
+                #26d0ce 51%,
+                #1a2980 100%
+            );
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            box-shadow: 0 0 20px #eee;
+            display: block;
+
+            &:hover {
+                background-position: right center; /* change the direction of the change here */
+                color: #fff;
+                text-decoration: none;
+            }
         }
     }
 
-    .create-content-doctor {
-        padding: 5px;
-        margin: 30px 0;
-        border: none;
-        outline: none;
-        border-radius: 5px;
-        background: #0071ba;
-        color: #fff;
-        cursor: pointer;
+    input.form-control {
+        min-height: 38px;
+    }
+    label {
+        padding-left: 9px;
+        margin-bottom: 2px;
+    }
 
-        &:hover {
-            opacity: 0.9;
-        }
+    .common {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+        font-size: 13px;
     }
 }

@@ -10,6 +10,7 @@ import {
     createNewClinic,
 } from "../../../services/userService";
 import { toast } from "react-toastify";
+import { FormattedMessage } from "react-intl";
 
 const mdParser = new MarkdownIt(/* Markdown-it options */);
 
@@ -79,10 +80,16 @@ class ManageClinic extends Component {
         return (
             <>
                 <div className="manage-clinic-container container">
-                    <div className="ms-title">Quan ly phong kham</div>
+                    <div className="ms-title">
+                        <FormattedMessage id={"manage-clinic.title"} />
+                    </div>
                     <div className="add-new-clinic row">
                         <div className="col-6 form-group">
-                            <label>Ten phong kham</label>
+                            <label>
+                                <FormattedMessage
+                                    id={"manage-clinic.name-clinic"}
+                                />
+                            </label>
                             <input
                                 className="form-control "
                                 type="text"
@@ -92,24 +99,32 @@ class ManageClinic extends Component {
                                 }}
                             ></input>
                         </div>
+
                         <div className="col-6 form-group">
-                            <label>Anh phong kham</label>
-                            <input
-                                className="form-control-file"
-                                type="file"
-                                onChange={(event) => {
-                                    this.handleOnChangeImage(event);
-                                }}
-                            ></input>
-                        </div>
-                        <div className="col-6 form-group">
-                            <label>Dia chi phong kham</label>
+                            <label>
+                                <FormattedMessage
+                                    id={"manage-clinic.address-clinic"}
+                                />
+                            </label>
                             <input
                                 className="form-control "
                                 type="text"
                                 value={this.state.address}
                                 onChange={(event) => {
                                     this.handleOnChangeInput(event, "address");
+                                }}
+                            ></input>
+                        </div>
+                        <div className="col-12 form-group">
+                            <label className="img">
+                                <FormattedMessage id={"manage-clinic.image"} />
+                            </label>
+
+                            <input
+                                className="form-control-file"
+                                type="file"
+                                onChange={(event) => {
+                                    this.handleOnChangeImage(event);
                                 }}
                             ></input>
                         </div>
@@ -121,14 +136,14 @@ class ManageClinic extends Component {
                                 value={this.state.descriptionMarkdown}
                             />
                         </div>
-                        <div className="col-12">
+                        <div className="col-12 button">
                             <button
                                 className="btn-save-special"
                                 onClick={() => {
                                     this.handleSaveNewClinic();
                                 }}
                             >
-                                Save
+                                <FormattedMessage id={"manage-clinic.save"} />
                             </button>
                         </div>
                     </div>

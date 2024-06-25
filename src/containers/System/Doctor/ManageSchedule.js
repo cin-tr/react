@@ -168,9 +168,18 @@ class ManageSchedule extends Component {
                                 value={this.state.selectedDoctor}
                                 onChange={this.handleChangeSelect}
                                 options={this.state.listDoctors}
+                                placeholder={
+                                    <div>
+                                        <i className="fas fa-user-md"></i>
+                                        <FormattedMessage id="manage-schedule.choose-doctor" />
+                                    </div>
+                                }
                             />
                         </div>
-                        <div className="col-6 form-group">
+                        <div
+                            className="col-6 form-group"
+                            style={{ height: "38px" }}
+                        >
                             <label>
                                 <FormattedMessage id="manage-schedule.choose-date" />
                             </label>
@@ -180,6 +189,11 @@ class ManageSchedule extends Component {
                                 value={this.state.currentDate}
                                 minDate={yesterday}
                             />
+                        </div>
+                        <div className="col-12 form-group des">
+                            <span>
+                                <FormattedMessage id="manage-schedule.hour" />
+                            </span>
                         </div>
                         <div className="col-12 pick-hour-container">
                             {rangeTime &&
@@ -204,7 +218,7 @@ class ManageSchedule extends Component {
                                     );
                                 })}
                         </div>
-                        <div className="col-12">
+                        <div className="col-12 button">
                             <button
                                 className="btn btn-primary"
                                 onClick={() => this.handleSaveSchedule()}

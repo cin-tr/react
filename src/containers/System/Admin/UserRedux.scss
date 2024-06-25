@@ -1,21 +1,106 @@
-.preview-img-container {
-    .label-upload {
-        padding: 5px;
-        border-radius: 3px;
-        background: #ddd;
-        cursor: pointer;
-
-        &:hover {
-            opacity: 0.8;
-        }
+.user-redux-container {
+    .title {
+        font-size: 30px;
+        color: #1b2d82;
+        letter-spacing: 3px;
+        text-shadow: 2px 2px #24cacb;
     }
+    .user-redux-body {
+        padding-top: 20px;
 
-    .preview-image {
-        height: 50px;
-        width: 100%;
-        border: 1px solid #ddd;
-        background: center center no-repeat;
-        background-size: contain;
-        cursor: pointer;
+        label {
+            margin-top: 10px;
+            margin-bottom: 0px;
+            padding-left: 5px;
+        }
+
+        .preview-img-container {
+            .label-upload {
+                padding: 5px;
+                border-radius: 3px;
+                background: #ddd;
+                cursor: pointer;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+
+                i {
+                    padding-left: 6px;
+                }
+            }
+
+            .preview-image {
+                height: 50px;
+                width: 100%;
+                border: 1px solid #ddd;
+                background: center center no-repeat;
+                background-size: contain;
+                cursor: pointer;
+                background-color: #fff;
+                margin-top: 7px;
+            }
+        }
+
+        .button {
+            display: flex;
+            justify-content: center;
+            .btn-primary {
+                min-width: 150px;
+                margin: 25px 0;
+                height: 40px;
+                outline: none;
+                border: none;
+                border-radius: 999px;
+                color: #dadbe3;
+
+                background-image: linear-gradient(
+                    to right,
+                    #1a2980 0%,
+                    #26d0ce 51%,
+                    #1a2980 100%
+                );
+                text-align: center;
+                text-transform: uppercase;
+                transition: 0.5s;
+                background-size: 200% auto;
+                box-shadow: 0 0 20px #eee;
+                display: block;
+
+                &:hover {
+                    background-position: right center; /* change the direction of the change here */
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+            .btn-warning {
+                min-width: 150px;
+                margin: 25px 0;
+                height: 40px;
+                outline: none;
+                border: none;
+                border-radius: 999px;
+                color: #1b2a81;
+
+                background-image: linear-gradient(
+                    to right,
+                    #ff8008 0%,
+                    #ffc837 51%,
+                    #ff8008 100%
+                );
+                text-align: center;
+                text-transform: uppercase;
+                transition: 0.5s;
+                background-size: 200% auto;
+                box-shadow: 0 0 20px #eee;
+                display: block;
+
+                &:hover {
+                    background-position: right center; /* change the direction of the change here */
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+        }
     }
 }

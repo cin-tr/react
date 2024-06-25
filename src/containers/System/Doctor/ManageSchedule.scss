@@ -1,26 +1,82 @@
 .manage-schedule-container {
     .m-s-title {
         margin: 15px 0;
-        font-size: 20px;
-        font-weight: 600;
         text-align: center;
         text-transform: uppercase;
-        color: #0071ba;
+        font-size: 30px;
+        color: #1b2d82;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px #24cacb;
+        font-weight: bold;
+        padding-bottom: 20px;
     }
 
     .pick-hour-container {
-        padding: 20px;
+        padding: 10px;
         display: flex;
+        justify-content: center;
         gap: 20px;
         flex-wrap: wrap;
 
         .btn-schedule {
             border: 1px solid gray;
             padding: 5px 10px;
+            min-width: 155px;
+            border-radius: 99px;
+            background-color: #fff;
 
             &.active {
-                background-color: orange;
+                background-color: #28bfc6;
                 color: #fff;
+            }
+        }
+    }
+
+    .des {
+        text-align: center;
+        margin-bottom: 0px;
+        margin-top: 35px;
+        font-size: 15px;
+    }
+
+    label {
+        padding-left: 10px;
+        margin-bottom: 3px;
+    }
+
+    .form-control {
+        height: 38px;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        .btn-primary {
+            min-width: 180px;
+            margin: 50px 0;
+            height: 40px;
+            outline: none;
+            border: none;
+            border-radius: 999px;
+            color: #dadbe3;
+
+            background-image: linear-gradient(
+                to right,
+                #1a2980 0%,
+                #26d0ce 51%,
+                #1a2980 100%
+            );
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            box-shadow: 0 0 20px #eee;
+            display: block;
+
+            &:hover {
+                background-position: right center; /* change the direction of the change here */
+                color: #fff;
+                text-decoration: none;
             }
         }
     }

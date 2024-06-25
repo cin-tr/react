@@ -1,21 +1,64 @@
 .manage-clinic-container {
     .ms-title {
         margin: 15px 0;
-        font-size: 20px;
-        font-weight: 600;
         text-align: center;
         text-transform: uppercase;
-        color: #0071ba;
+        font-size: 30px;
+        color: #1b2d82;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px #24cacb;
+        font-weight: bold;
+        padding-bottom: 20px;
     }
     .add-new-clinic {
-        .btn-save-special {
-            border: none;
-            outline: none;
-            background: orange;
-            padding: 8px 5px;
-            min-width: 75px;
-            border-radius: 3px;
-            margin: 15px 0;
+        .button {
+            display: flex;
+            justify-content: center;
+            .btn-save-special {
+                min-width: 180px;
+                margin: 50px 0;
+                height: 40px;
+                outline: none;
+                border: none;
+                border-radius: 999px;
+                color: #dadbe3;
+
+                background-image: linear-gradient(
+                    to right,
+                    #1a2980 0%,
+                    #26d0ce 51%,
+                    #1a2980 100%
+                );
+                text-align: center;
+                text-transform: uppercase;
+                transition: 0.5s;
+                background-size: 200% auto;
+                box-shadow: 0 0 20px #eee;
+                display: block;
+
+                &:hover {
+                    background-position: right center; /* change the direction of the change here */
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
         }
+    }
+
+    label {
+        padding-left: 10px;
+        margin-bottom: 3px;
+    }
+
+    .img {
+        display: block;
+        text-align: center;
+        margin-top: 28px;
+    }
+
+    .form-control-file {
+        padding-left: 470px;
+        font-size: 12px;
+        margin-bottom: 28px;
     }
 }

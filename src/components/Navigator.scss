@@ -42,12 +42,15 @@
                 text-transform: none;
                 color: #fff;
 
-                &.active:hover {
+                &:hover {
+                    a {
+                        color: darken($colormain, 5);
+                    }
                 }
 
                 .menu-link {
                     text-decoration: none;
-                    color: darken($colormain, 5);
+                    color: #fff;
                 }
                 .sub-menu-list {
                     display: none;

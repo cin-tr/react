@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import * as actions from "../../../store/actions";
 import { LANGUAGE } from "../../../utils";
 import { withRouter } from "react-router";
+import "./OutStandingDoctor.scss";
 
 class OutStandingDoctor extends Component {
     constructor(props) {
@@ -84,7 +85,6 @@ class OutStandingDoctor extends Component {
                                                         ? nameVi
                                                         : nameEn}
                                                 </div>
-                                                <div>Cơ xương khớp</div>
                                             </div>
                                         </div>
                                     );

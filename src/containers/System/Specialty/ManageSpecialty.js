@@ -7,6 +7,7 @@ import "react-markdown-editor-lite/lib/index.css";
 import { CommonUtils } from "../../../utils";
 import { createNewSpecialty } from "../../../services/userService";
 import { toast } from "react-toastify";
+import { FormattedMessage } from "react-intl";
 
 const mdParser = new MarkdownIt(/* Markdown-it options */);
 
@@ -74,10 +75,16 @@ class ManageSpecialty extends Component {
         return (
             <>
                 <div className="manage-specialty-container container">
-                    <div className="ms-title">Quan ly chuyen khoa</div>
+                    <div className="ms-title">
+                        <FormattedMessage id={"manage-specialty.title"} />
+                    </div>
                     <div className="add-new-specialty row">
                         <div className="col-6 form-group">
-                            <label>ten chuyen khoa</label>
+                            <label>
+                                <FormattedMessage
+                                    id={"manage-specialty.name-specialty"}
+                                />
+                            </label>
                             <input
                                 className="form-control "
                                 type="text"
@@ -88,7 +95,11 @@ class ManageSpecialty extends Component {
                             ></input>
                         </div>
                         <div className="col-6 form-group">
-                            <label>Anh chuyen khoa</label>
+                            <label>
+                                <FormattedMessage
+                                    id={"manage-specialty.image"}
+                                />
+                            </label>
                             <input
                                 className="form-control-file"
                                 type="file"
@@ -105,14 +116,16 @@ class ManageSpecialty extends Component {
                                 value={this.state.descriptionMarkdown}
                             />
                         </div>
-                        <div className="col-12">
+                        <div className="col-12 button">
                             <button
                                 className="btn-save-special"
                                 onClick={() => {
                                     this.handleSaveNewSpecialty();
                                 }}
                             >
-                                Save
+                                <FormattedMessage
+                                    id={"manage-specialty.save"}
+                                />
                             </button>
                         </div>
                     </div>

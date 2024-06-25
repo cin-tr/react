@@ -1,0 +1,15 @@
+.system-container {
+    .system-list {
+        background-color: #ffffff;
+        background-image: linear-gradient(
+            90deg,
+            #ffffff 0%,
+            #d3f3f5 25%,
+            #d3f3f5 75%,
+            #ffffff 100%
+        );
+
+        padding-top: 35px;
+        min-height: 100vh;
+    }
+}
