@@ -20,8 +20,8 @@ class About extends Component {
                             <iframe
                                 width="100%"
                                 height="400"
-                                src="https://www.youtube.com/embed/QsUURpGABdU"
-                                title="nhạc genz cho hè chill | Em Có Quen Người Nào Chưa TikTok |  Lưu Luyến Sau Chia Tay x Thức Giấc Lofi"
+                                src="https://www.youtube.com/embed/ajJbeFFI9F4"
+                                title="Đau lưng dưới gần mông là dấu hiệu của bệnh gì? GS. TS Nguyễn Văn Thông giải đáp"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen
@@ -32,7 +32,7 @@ class About extends Component {
                                 Tìm hiểu thông tin y khoa xác thực, hữu ích tại
                                 Website 👨‍⚕️👩‍⚕️ Bạn đang tìm kiếm thông tin y khoa
                                 uy tín để chăm sóc sức khỏe bản thân và gia
-                                đình? Hãy truy cập Sống khỏe cùng với các bài
+                                đình? Hãy truy cập YourHealth cùng với các bài
                                 viết được kiểm duyệt bởi đội ngũ bác sĩ chuyên
                                 khoa.
                             </p>

@@ -40,6 +40,17 @@
         "doctor": {
             "manage-schedule": "Doctor's Schedule Management",
             "manage-patient": "Doctor's Patients Management"
+        },
+        "manage-patient": {
+            "choose-date": "Choose an examination date",
+            "table": {
+                "stt": "STT",
+                "time": "Time",
+                "full-name": "Full Name",
+                "address": "Address",
+                "sex": "Gender",
+                "action": "Action"
+            }
         }
     },
     "manage-user": {
@@ -61,8 +72,10 @@
     },
     "homepage": {
         "outstanding-doctor": "Outstanding doctor",
-        "more-info": "More...",
-        "specialty-popular": "Popular Specialties"
+        "more-infor": "More...",
+        "specialty-popular": "Popular Specialties",
+        "handbook": "Handbook",
+        "medical-facility": "Outstanding Medical Facilities"
     },
 
     "manage-schedule": {
@@ -84,6 +97,13 @@
         "title": "Specialty Management",
         "name-specialty": "Specialty Name",
         "image": "Upload Specialty Photo",
+        "save": "Save Info"
+    },
+
+    "manage-handbook": {
+        "title": "Handbook Management",
+        "name-specialty": "Handbook Name",
+        "image": "Upload Handbook Photo",
         "save": "Save Info"
     },
 
@@ -147,5 +167,18 @@
         "lastname": "Last Name",
         "address": "Address",
         "action": "Action"
+    },
+
+    "verify-email": {
+        "info-success": "Confirm successful booking!",
+        "info-fail": "Appointment schedule does not exist or has been confirmed!"
+    },
+
+    "remedy": {
+        "title": "Invoice sent successfully",
+        "email": "Patient email",
+        "choose-file": "Select the prescription file",
+        "btn-send": "Send",
+        "btn-cancel": "Cancel"
     }
 }

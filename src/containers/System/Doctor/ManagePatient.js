@@ -128,13 +128,19 @@ class ManagePatient extends Component {
                     spinner
                     text="Loading..."
                 >
-                    <div className="manage-patient-container">
+                    <div className="manage-patient-container container">
                         <div className="m-p-title">
-                            Quan ly benh nhan kham benh
+                            <FormattedMessage
+                                id={"menu.doctor.manage-patient"}
+                            />
                         </div>
                         <div className="manage-patient-body row">
-                            <div className="col-4 form-group">
-                                <label>Chon ngay kham</label>
+                            <div className="col-6 form-group">
+                                <label>
+                                    <FormattedMessage
+                                        id={"menu.manage-patient.choose-date"}
+                                    />
+                                </label>
                                 <DatePicker
                                     onChange={this.handleOnchangeDatePicker}
                                     className="form-group"
@@ -145,12 +151,48 @@ class ManagePatient extends Component {
                                 <table style={{ width: "100%" }}>
                                     <tbody>
                                         <tr>
-                                            <th>STT</th>
-                                            <th>THOI GIAN</th>
-                                            <th>HO VA TEN</th>
-                                            <th>DIA CHI</th>
-                                            <th>GIOI TINH</th>
-                                            <th>ACTIONS</th>
+                                            <th>
+                                                <FormattedMessage
+                                                    id={
+                                                        "menu.manage-patient.table.stt"
+                                                    }
+                                                />
+                                            </th>
+                                            <th>
+                                                <FormattedMessage
+                                                    id={
+                                                        "menu.manage-patient.table.time"
+                                                    }
+                                                />
+                                            </th>
+                                            <th>
+                                                <FormattedMessage
+                                                    id={
+                                                        "menu.manage-patient.table.full-name"
+                                                    }
+                                                />
+                                            </th>
+                                            <th>
+                                                <FormattedMessage
+                                                    id={
+                                                        "menu.manage-patient.table.address"
+                                                    }
+                                                />
+                                            </th>
+                                            <th>
+                                                <FormattedMessage
+                                                    id={
+                                                        "menu.manage-patient.table.sex"
+                                                    }
+                                                />
+                                            </th>
+                                            <th>
+                                                <FormattedMessage
+                                                    id={
+                                                        "menu.manage-patient.table.action"
+                                                    }
+                                                />
+                                            </th>
                                         </tr>
                                         {dataPatient &&
                                         dataPatient.length > 0 ? (
@@ -197,7 +239,11 @@ class ManagePatient extends Component {
                                                                     )
                                                                 }
                                                             >
-                                                                Xac nhan
+                                                                <FormattedMessage
+                                                                    id={
+                                                                        "patient.booking-modal.btn-confirm"
+                                                                    }
+                                                                />
                                                             </button>
                                                         </td>
                                                     </tr>

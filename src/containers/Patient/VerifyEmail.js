@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { postVerifyBookAppointment } from "../../services/userService";
 import HomeHeader from "../HomePage/HomeHeader";
 import "./VerifyEmail.scss";
+import { FormattedMessage } from "react-intl";
 
 class VerifyEmail extends Component {
     constructor(props) {
@@ -49,12 +50,15 @@ class VerifyEmail extends Component {
                         <div>
                             {+errCode === 0 ? (
                                 <div className="infor-booking">
-                                    Xác nhận đặt lịch thành công!
+                                    <FormattedMessage
+                                        id={"verify-email.info-success"}
+                                    />
                                 </div>
                             ) : (
                                 <div className="infor-booking">
-                                    Lịch hẹn không tồn tại hoặc đã được xác
-                                    nhận!
+                                    <FormattedMessage
+                                        id={"verify-email.info-fail"}
+                                    />
                                 </div>
                             )}
                         </div>

@@ -7,6 +7,7 @@ import ManageDoctor from "../containers/System/Admin/ManageDoctor";
 import Header from "../containers/Header/Header";
 import ManageSpecialty from "../containers/System/Specialty/ManageSpecialty";
 import ManageClinic from "../containers/System/Clinic/ManageClinic";
+import ManageHandbook from "../containers/System/Handbook/ManageHandbook";
 import "./System.scss";
 
 class System extends Component {
@@ -41,6 +42,11 @@ class System extends Component {
                             <Route
                                 path="/system/manage-clinic"
                                 component={ManageClinic}
+                            />
+
+                            <Route
+                                path="/system/manage-handbook"
+                                component={ManageHandbook}
                             />
 
                             <Route

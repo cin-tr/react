@@ -37,7 +37,7 @@ class MedicalFacility extends Component {
                 <div className="section-container">
                     <div className="section-header">
                         <span className="title-section">
-                            Cơ sở y tế nổi bật
+                            <FormattedMessage id="homepage.medical-facility" />
                         </span>
                         <button className="btn-section">
                             <Link to={`detail-clinic/11`}>

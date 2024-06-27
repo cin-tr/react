@@ -40,6 +40,17 @@
         "doctor": {
             "manage-schedule": "Quản lý lịch khám bệnh",
             "manage-patient": "Quản lý bệnh nhân khám bệnh"
+        },
+        "manage-patient": {
+            "choose-date": "Chọn ngày khám",
+            "table": {
+                "stt": "STT",
+                "time": "Thời gian",
+                "full-name": "Họ và tên",
+                "address": "Địa chỉ liên hệ",
+                "sex": "Giới tính",
+                "action": "Hành động"
+            }
         }
     },
     "manage-user": {
@@ -62,7 +73,9 @@
     "homepage": {
         "outstanding-doctor": "Bác sĩ nổi bật",
         "more-infor": "Xem thêm",
-        "specialty-popular": "Chuyên khoa phổ biến"
+        "specialty-popular": "Chuyên khoa phổ biến",
+        "handbook": "Cẩm nang",
+        "medical-facility": "Cơ sở y tế nổi bật"
     },
 
     "manage-schedule": {
@@ -85,6 +98,13 @@
         "title": "Quản lý chuyên khoa",
         "name-specialty": "Tên chuyên khoa",
         "image": "Tải ảnh chuyên khoa",
+        "save": "Lưu Thông Tin"
+    },
+
+    "manage-handbook": {
+        "title": "Quản lý cẩm nang",
+        "name-specialty": "Tên cẩm nang",
+        "image": "Tải ảnh cẩm nang",
         "save": "Lưu Thông Tin"
     },
 
@@ -149,5 +169,18 @@
         "lastname": "Họ",
         "address": "Địa chỉ",
         "action": "Hành động"
+    },
+
+    "verify-email": {
+        "info-success": "Xác nhận đặt lịch thành công!",
+        "info-fail": "Lịch hẹn không tồn tại hoặc đã được xác nhận!"
+    },
+
+    "remedy": {
+        "title": "Gửi hoá đơn thành công",
+        "email": "Email bệnh nhân",
+        "choose-file": "Chọn file đơn thuốc",
+        "btn-send": "Gửi",
+        "btn-cancel": "Huỷ bỏ"
     }
 }

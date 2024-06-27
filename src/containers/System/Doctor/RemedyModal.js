@@ -66,7 +66,9 @@ class RemedyModal extends Component {
                 // backdrop={true}
             >
                 <div className="modal-header">
-                    <h5 className="modal-title">Gui hoa don thanh cong</h5>
+                    <h5 className="modal-title">
+                        <FormattedMessage id={"remedy.title"} />
+                    </h5>
                     <button
                         type="button"
                         className="close"
@@ -80,7 +82,9 @@ class RemedyModal extends Component {
                 <ModalBody>
                     <div className="row">
                         <div className="col-6 form-group">
-                            <label>Email benh nhan</label>
+                            <label>
+                                <FormattedMessage id={"remedy.email"} />
+                            </label>
                             <input
                                 className="form-control"
                                 type="email"
@@ -92,7 +96,9 @@ class RemedyModal extends Component {
                         </div>
 
                         <div className="col-6 form-group">
-                            <label>Chon file don thuoc</label>
+                            <label>
+                                <FormattedMessage id={"remedy.choose-file"} />
+                            </label>
                             <input
                                 className="form-control-file"
                                 type="file"
@@ -105,13 +111,18 @@ class RemedyModal extends Component {
                 </ModalBody>
                 <ModalFooter>
                     <Button
+                        className="send"
                         color="primary"
                         onClick={() => this.handleSendRemedy()}
                     >
-                        Send
+                        <FormattedMessage id={"remedy.btn-send"} />
                     </Button>
-                    <Button color="secondary" onClick={closeRemedyModal}>
-                        Cancel
+                    <Button
+                        className="cancel"
+                        color="secondary"
+                        onClick={closeRemedyModal}
+                    >
+                        <FormattedMessage id={"remedy.btn-cancel"} />
                     </Button>
                 </ModalFooter>
             </Modal>
