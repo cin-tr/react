@@ -1,7 +1,19 @@
-.section-body {
-    .section-customize {
-        .bg-image.handbook {
-            background-size: cover !important;
+.section-share.section-specialty.handbook {
+    background-image: linear-gradient(
+        0deg,
+        #ffffff 0%,
+        #ffffff 50%,
+        #ffffff 100%
+    ) !important;
+    .section-container {
+        .section-body {
+            .section-customize {
+                .bg-image.handbook {
+                    background-size: cover !important;
+                    border: 1px solid #1c3385;
+                    box-shadow: 2px 2px 2px #000;
+                }
+            }
         }
     }
 }

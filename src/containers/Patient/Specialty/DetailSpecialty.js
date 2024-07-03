@@ -13,6 +13,7 @@ import {
 } from "../../../services/userService";
 import _ from "lodash";
 import { LANGUAGE } from "../../../utils";
+import * as ReactDOM from "react-dom";
 
 class DetailSpecialty extends Component {
     constructor(props) {
@@ -25,6 +26,7 @@ class DetailSpecialty extends Component {
     }
 
     async componentDidMount() {
+        ReactDOM.findDOMNode(this).scrollIntoView();
         if (
             this.props.match &&
             this.props.match.params &&

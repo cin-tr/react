@@ -33,7 +33,7 @@ class Handbook extends Component {
     render() {
         let { dataHandbook } = this.state;
         return (
-            <div className="section-share section-specialty">
+            <div className="section-share section-specialty handbook">
                 <div className="section-container">
                     <div className="section-header">
                         <span className="title-section">

@@ -7,6 +7,7 @@ import { LANGUAGE } from "../../../utils";
 import { getDetailInforDoctor } from "../../../services/userService";
 import DoctorSchedule from "./DoctorSchedule";
 import DoctorExtraInfor from "./DoctorExtraInfor";
+import * as ReactDOM from "react-dom";
 
 class DetailDoctor extends Component {
     constructor(props) {
@@ -18,6 +19,8 @@ class DetailDoctor extends Component {
     }
 
     async componentDidMount() {
+        ReactDOM.findDOMNode(this).scrollIntoView();
+        window.scrollTo(0, 0);
         if (
             this.props.match &&
             this.props.match.params &&

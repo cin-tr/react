@@ -36,11 +36,19 @@
             }
 
             .btn-booking-confirm {
-                background-color: orange;
+                background-color: #76dae6;
+                color: #fff;
+                &:hover {
+                    color: #000;
+                }
             }
 
             .btn-booking-cancel {
                 background-color: #e45a37;
+                color: #fff;
+                &:hover {
+                    color: #000;
+                }
             }
         }
     }

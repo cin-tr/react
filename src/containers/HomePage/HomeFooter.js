@@ -20,31 +20,29 @@ class HomeFooter extends Component {
                     <div className="home-footer-content">
                         <div className="content-up">
                             <div className="des-1">
-                                up skill for a better future
+                                Đặt lịch nhanh - Khám dễ dàng
                             </div>
                             <div className="des-2">
-                                request more information{" "}
+                                Chăm sóc sức khoẻ toàn diện{" "}
                             </div>
                             <div className="des-3">
-                                Lift Media, LLC is a clinical stage healthcare
-                                company which is developing a unique
+                                YourHealth quan tâm đến sức khoẻ một cách tận
+                                tâm nhất
                             </div>
                             <div className="des-4">
                                 <button className="btn btn-primary btn-footer">
-                                    Contact us
+                                    Liên hệ
                                 </button>
                             </div>
-                            <div className="des-5">
-                                &#169; 2024 Lift Media, LLc
-                            </div>
+                            <div className="des-5">&#169; 2024 YourHealth.</div>
                         </div>
                         <div className="content-down">
                             <div className="logo"></div>
                             <div className="contact">
-                                <div className="item">Team</div>
-                                <div className="item">Case Studies</div>
-                                <div className="item">Publications</div>
-                                <div className="item">Policy</div>
+                                <div className="item">Tuyển dụng</div>
+                                <div className="item">Chính sách</div>
+                                <div className="item">Điều khoản</div>
+                                <div className="item">Câu hỏi thường gặp</div>
                             </div>
                             <div className="icon">
                                 <div className="icon-footer">
