@@ -7,6 +7,8 @@ import moment from "moment";
 import {
     getAllPatientForDoctor,
     postSendRemedy,
+    postSendCancel,
+    getAllActionPatientForDoctor,
 } from "../../../services/userService";
 import { LANGUAGE } from "../../../utils";
 import RemedyModal from "./RemedyModal";
@@ -21,6 +23,7 @@ class ManagePatient extends Component {
         this.state = {
             currentDate: moment(new Date()).startOf("day").valueOf(),
             dataPatient: [],
+            dataActionPatient: [],
             isOpenRemedyModal: false,
             dataModal: {},
             isShowLoading: false,
@@ -28,6 +31,7 @@ class ManagePatient extends Component {
     }
     async componentDidMount() {
         this.getDataPatient();
+        this.getActionDataPatient();
     }
 
     getDataPatient = async () => {
@@ -43,6 +47,25 @@ class ManagePatient extends Component {
         if (res && res.errCode === 0) {
             this.setState({
                 dataPatient: res.data,
+            });
+        }
+    };
+
+    getActionDataPatient = async () => {
+        let { user } = this.props;
+        let { currentDate } = this.state;
+        let formattedDate = new Date(currentDate).getTime();
+
+        let res = await getAllActionPatientForDoctor({
+            doctorId: user.id,
+            date: formattedDate,
+        });
+
+        console.log("check res: ", res);
+
+        if (res && res.errCode === 0) {
+            this.setState({
+                dataActionPatient: res.data,
             });
         }
     };
@@ -78,6 +101,21 @@ class ManagePatient extends Component {
         });
     };
 
+    handleBtnCancel = async (item) => {
+        let data = await postSendCancel({
+            doctorId: item.doctorId,
+            patientId: item.patientId,
+            email: item.patientData.email,
+            timeType: item.timeType,
+            patientName: item.patientData.firstName,
+        });
+        console.log("data: ", data);
+        toast.success("Huỷ lịch thành công!");
+        this.setState({
+            dataModal: {},
+        });
+    };
+
     closeRemedyModal = () => {
         this.setState({
             isOpenRemedyModal: false,
@@ -106,20 +144,21 @@ class ManagePatient extends Component {
             this.setState({
                 isShowLoading: false,
             });
-            toast.success("Send Remedy succeed!");
+            toast.success("Gửi email thành công!");
             this.closeRemedyModal();
             await this.getDataPatient();
         } else {
             this.setState({
                 isShowLoading: false,
             });
-            toast.error("Something wrongs...");
+            toast.error("Gửi email thất bại...");
             console.log("error send remedy: ", res);
         }
     };
 
     render() {
-        let { dataPatient, isOpenRemedyModal, dataModal } = this.state;
+        let { dataPatient, isOpenRemedyModal, dataModal, dataActionPatient } =
+            this.state;
         let { language } = this.props;
         return (
             <>
@@ -186,7 +225,7 @@ class ManagePatient extends Component {
                                                     }
                                                 />
                                             </th>
-                                            <th>
+                                            <th style={{ width: "250px" }}>
                                                 <FormattedMessage
                                                     id={
                                                         "menu.manage-patient.table.action"
@@ -245,10 +284,150 @@ class ManagePatient extends Component {
                                                                     }
                                                                 />
                                                             </button>
+                                                            <button
+                                                                className="mp-btn-confirm cancel"
+                                                                onClick={() =>
+                                                                    this.handleBtnCancel(
+                                                                        item
+                                                                    )
+                                                                }
+                                                            >
+                                                                <FormattedMessage
+                                                                    id={
+                                                                        "patient.booking-modal.btn-cancel"
+                                                                    }
+                                                                />
+                                                            </button>
                                                         </td>
                                                     </tr>
                                                 );
                                             })
+                                        ) : (
+                                            <tr>
+                                                <td
+                                                    colSpan="6"
+                                                    style={{
+                                                        textAlign: "center",
+                                                    }}
+                                                >
+                                                    <FormattedMessage
+                                                        id={
+                                                            "patient.booking-modal.no-data"
+                                                        }
+                                                    />
+                                                </td>
+                                            </tr>
+                                        )}
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div className=" col-12 title-action">
+                                <FormattedMessage
+                                    id={"patient.booking-modal.label"}
+                                />
+                            </div>
+
+                            <div className="col-12 table-manage-patient table-action">
+                                <table style={{ width: "100%" }}>
+                                    <tbody>
+                                        <tr>
+                                            <th>
+                                                <FormattedMessage
+                                                    id={
+                                                        "menu.manage-patient.table.stt"
+                                                    }
+                                                />
+                                            </th>
+                                            <th>
+                                                <FormattedMessage
+                                                    id={
+                                                        "menu.manage-patient.table.time"
+                                                    }
+                                                />
+                                            </th>
+                                            <th>
+                                                <FormattedMessage
+                                                    id={
+                                                        "menu.manage-patient.table.full-name"
+                                                    }
+                                                />
+                                            </th>
+                                            <th>
+                                                <FormattedMessage
+                                                    id={
+                                                        "menu.manage-patient.table.address"
+                                                    }
+                                                />
+                                            </th>
+                                            <th>
+                                                <FormattedMessage
+                                                    id={
+                                                        "menu.manage-patient.table.sex"
+                                                    }
+                                                />
+                                            </th>
+                                            <th>
+                                                <FormattedMessage
+                                                    id={
+                                                        "menu.manage-patient.table.action"
+                                                    }
+                                                />
+                                            </th>
+                                        </tr>
+                                        {dataActionPatient &&
+                                        dataActionPatient.length > 0 ? (
+                                            dataActionPatient.map(
+                                                (item, index) => {
+                                                    let time =
+                                                        language === LANGUAGE.VI
+                                                            ? item
+                                                                  .timeTypeDataPatient
+                                                                  .valueVi
+                                                            : item
+                                                                  .timeTypeDataPatient
+                                                                  .valueEn;
+                                                    let gender =
+                                                        language === LANGUAGE.VI
+                                                            ? item.patientData
+                                                                  .genderData
+                                                                  .valueVi
+                                                            : item.patientData
+                                                                  .genderData
+                                                                  .valueEn;
+
+                                                    let action =
+                                                        language === LANGUAGE.VI
+                                                            ? item
+                                                                  .statusIdPatient
+                                                                  .valueVi
+                                                            : item
+                                                                  .statusIdPatient
+                                                                  .valueEn;
+                                                    return (
+                                                        <tr key={index}>
+                                                            <td>{index + 1}</td>
+                                                            <td>{time}</td>
+                                                            <td>
+                                                                {
+                                                                    item
+                                                                        .patientData
+                                                                        .firstName
+                                                                }
+                                                            </td>
+                                                            <td>
+                                                                {
+                                                                    item
+                                                                        .patientData
+                                                                        .address
+                                                                }
+                                                            </td>
+                                                            <td>{gender}</td>
+                                                            <td>{action}</td>
+                                                        </tr>
+                                                    );
+                                                }
+                                            )
                                         ) : (
                                             <tr>
                                                 <td

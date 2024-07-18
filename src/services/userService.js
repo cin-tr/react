@@ -100,8 +100,18 @@ const getAllPatientForDoctor = (data) => {
     );
 };
 
+const getAllActionPatientForDoctor = (data) => {
+    return axios.get(
+        `/api/get-action-list-patient-for-doctor?doctorId=${data.doctorId}&date=${data.date}`
+    );
+};
+
 const postSendRemedy = (data) => {
     return axios.post(`/api/send-remedy`, data);
+};
+
+const postSendCancel = (data) => {
+    return axios.post(`/api/send-cancel`, data);
 };
 
 const createNewHandbook = (data) => {
@@ -138,7 +148,9 @@ export {
     getAllClinic,
     getAllDetailClinicById,
     getAllPatientForDoctor,
+    getAllActionPatientForDoctor,
     postSendRemedy,
+    postSendCancel,
     createNewHandbook,
     getAllHandbook,
     getAllDetailHandbookById,

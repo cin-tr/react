@@ -133,7 +133,8 @@
             "btn-confirm": "Confirm",
             "btn-cancel": "Cancel",
             "price-booking": "Free booking",
-            "price": "Price: "
+            "price": "Price: ",
+            "label": "Management board of medical examination cases"
         }
     },
 

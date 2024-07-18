@@ -134,7 +134,9 @@
             "btn-confirm": "Xác nhận",
             "btn-cancel": "Huỷ bỏ",
             "price-booking": "Miễn phí đặt lịch",
-            "price": "Giá khám: "
+            "price": "Giá khám: ",
+            "no-data": "Không có bệnh nhân đặt lịch hôm nay!",
+            "label": "Bảng quản lý các ca khám bệnh trong ngày"
         }
     },
 

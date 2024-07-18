@@ -53,6 +53,7 @@ div._loading_overlay_wrapper {
             }
 
             .mp-btn-confirm {
+                min-width: 70px;
                 margin-right: 10px;
                 height: 30px;
                 border-radius: 10px;
@@ -62,11 +63,28 @@ div._loading_overlay_wrapper {
                 }
             }
 
+            .cancel {
+                background-color: #ff6933;
+            }
+
             .mp-btn-remedy {
                 height: 30px;
                 border-radius: 3px;
                 background: #2ee0dd;
             }
+        }
+
+        .table-action {
+            margin-top: 10px;
+        }
+
+        .title-action {
+            margin-top: 50px;
+            color: #1b2d82;
+            font-size: 20px;
+            font-weight: 500;
+            text-align: center;
+            text-decoration: underline;
         }
     }
 }
