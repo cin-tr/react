@@ -170,7 +170,8 @@
         "firstname": "Tên",
         "lastname": "Họ",
         "address": "Địa chỉ",
-        "action": "Hành động"
+        "action": "Hành động",
+        "status": "Trạng thái"
     },
 
     "verify-email": {

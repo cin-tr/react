@@ -134,7 +134,8 @@
             "btn-cancel": "Cancel",
             "price-booking": "Free booking",
             "price": "Price: ",
-            "label": "Management board of medical examination cases"
+            "label": "Management board of medical examination cases",
+            "no-data": "There are no patients scheduled today!"
         }
     },
 
@@ -167,7 +168,8 @@
         "firstname": "First Name",
         "lastname": "Last Name",
         "address": "Address",
-        "action": "Action"
+        "action": "Action",
+        "status": "Status"
     },
 
     "verify-email": {

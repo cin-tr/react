@@ -369,9 +369,7 @@ class ManagePatient extends Component {
                                             </th>
                                             <th>
                                                 <FormattedMessage
-                                                    id={
-                                                        "menu.manage-patient.table.action"
-                                                    }
+                                                    id={"table.status"}
                                                 />
                                             </th>
                                         </tr>
@@ -436,7 +434,11 @@ class ManagePatient extends Component {
                                                         textAlign: "center",
                                                     }}
                                                 >
-                                                    No data
+                                                    <FormattedMessage
+                                                        id={
+                                                            "patient.booking-modal.no-data"
+                                                        }
+                                                    />
                                                 </td>
                                             </tr>
                                         )}
